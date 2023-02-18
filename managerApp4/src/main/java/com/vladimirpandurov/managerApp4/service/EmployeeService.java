@@ -3,6 +3,7 @@ package com.vladimirpandurov.managerApp4.service;
 import com.vladimirpandurov.managerApp4.exception.EmployeeNotFoundException;
 import com.vladimirpandurov.managerApp4.model.Employee;
 import com.vladimirpandurov.managerApp4.repository.EmployeeRepository;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +12,7 @@ import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class EmployeeService {
 
     private final EmployeeRepository employeeRepository;
